@@ -30,7 +30,7 @@ export default function Home() {
             <div className="lg:pt-4 lg:pr-8">
               <div className="lg:max-w-lg">
                 <h2 className={`${lora.className} text-base/7 font-semibold text-[#677D50]`}>cà phê [kah-fey] • coffee</h2>
-                <p className={`${lato.className} mt-2 text-4xl font-semibold text-pretty text-gray-900 sm:text-5xl`}>
+                <p className={`${lato.className} mt-2 text-4xl font-semibold text-pretty text-[#242831] sm:text-5xl`}>
                   ABOUT US
                 </p>
 
@@ -56,10 +56,45 @@ export default function Home() {
               </div>
             </div>
             <img
-              alt="Coffee and pastries"
+              alt="Inside of Drip Ca Phe"
               src="https://s3-media0.fl.yelpcdn.com/bphoto/j-8IyzsS1KHzbEGVFvoIEQ/o.jpg"
               className="w-full max-w-none md:-ml-4 lg:-ml-0"
             />
+          </div>
+        </div>
+      </div>
+
+      {/* location and hours */}
+      <div className="w-full flex h-[400px]">
+        {/* left half */}
+        <div className="w-1/2 bg-[#43403A] flex items-center justify-end px-6">
+          <p className={`${lato.className} mt-2 text-4xl font-semibold text-pretty text-[#E7E7E7] sm:text-5xl`}>
+                  LOCATION & HOURS
+                </p>
+        </div>
+
+        {/* right half */}
+        <div className="w-2/3 bg-[#F2F2F2] flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center">
+            <p className={`${lora.className} font-semibold text-[#242831]`}>LOCATION</p>
+            <p className={`${lato.className} font-semibold text-gray-600`}>
+                  4230 Annandale Rd Ste 160 Annandale, VA 22003
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <p className={`${lora.className} font-semibold text-[#242831] mt-15`}>HOURS</p>
+            <p className={`${lato.className} font-semibold text-gray-600`}>
+                  <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-25 gap-y-16 lg:mx-0 lg:max-w-none grid-cols-2">
+                  <div className="lg:pt-4 lg:pr-8">
+                    <p>Mon</p>
+                    <p>Tues-Sun</p>
+                  </div>
+                  <div className="lg:pt-4 lg:pr-8">
+                    <p>8am-6pm</p>
+                    <p>8am-8pm</p>
+                  </div>
+                  </div>
+            </p>
           </div>
         </div>
       </div>
