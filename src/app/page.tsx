@@ -62,6 +62,9 @@ export default function Home() {
             />
           </div>
         </div>
+        {/* <!-- Elfsight All-in-One Reviews | Untitled All-in-One Reviews --> */}
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div className="elfsight-app-4e7d4263-910c-45e0-8a67-c67d795f54a5 mt-15" data-elfsight-app-lazy></div>
       </div>
 
       {/* location and hours */}
@@ -96,6 +99,73 @@ export default function Home() {
                   </div>
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* menu preview section */}
+      <div className="overflow-hidden bg-[#E7E7E7] w-full py-24 sm:py-32">
+        <div className="flex flex-col items-center">
+            <p className={`${lora.className} text-base/7 font-semibold text-[#677D50] mt-2`}>explore our menu</p>
+            <p className={`${lato.className} mt-2 text-4xl font-semibold text-pretty text-[#242831] sm:text-5xl`}>CÀ PHÊ</p>
+            
+            <div className="flex flex-wrap justify-center mt-10 gap-8">
+              <div className="flex flex-col items-center group overflow-hidden">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
+                  alt="Latte"
+                  className="w-64 h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                />
+                <span className="relative group cursor-pointer">
+                  <span className={`${lora.className} font-semibold text-[#242831] text-lg transition-colors group-hover:text-[#677D50]`}>signatures</span>
+                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[#677D50] transition-all group-hover:w-full duration-300"></span>
+                </span>
+              </div>
+
+
+              <div className="flex flex-col items-center group overflow-hidden">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
+                  alt="Latte"
+                  className="w-64 h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                />
+                <span className="relative group cursor-pointer">
+                  <span className={`${lora.className} font-semibold text-[#242831] text-lg transition-colors group-hover:text-[#677D50]`}>non-coffee</span>
+                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[#677D50] transition-all group-hover:w-full duration-300"></span>
+                </span>
+              </div>
+
+
+              <div className="flex flex-col items-center group overflow-hidden">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
+                  alt="Latte"
+                  className="w-64 h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                />
+                <span className="relative group cursor-pointer">
+                  <span className={`${lora.className} font-semibold text-[#242831] text-lg transition-colors group-hover:text-[#677D50]`}>coffee</span>
+                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[#677D50] transition-all group-hover:w-full duration-300"></span>
+                </span>
+              </div>
+
+
+              <div className="flex flex-col items-center group overflow-hidden">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
+                  alt="Latte"
+                  className="w-64 h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                />
+                <span className="relative group cursor-pointer">
+                  <span className={`${lora.className} font-semibold text-[#242831] text-lg transition-colors group-hover:text-[#677D50]`}>espresso bar</span>
+                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[#677D50] transition-all group-hover:w-full duration-300"></span>
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-15">
+              <Link href="/menu" className={`${lora.className} font-bold bg-[#677D50] text-white px-6 py-3 rounded-full hover:bg-[#556842] transition-colors`}>
+                View Full Menu
+              </Link>
+            </div>
         </div>
       </div>
 
