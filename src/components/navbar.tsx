@@ -3,7 +3,7 @@ import { lato } from '../app/fonts'
 
 export default function Navbar() {
   return (
-    <nav className="bg-[#43403A] text-white px-6 py-9">
+    <nav className="bg-[#43403A] text-white px-6 py-9 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">Drip Ca Phe</Link>
         <div className="flex items-center space-x-6">
