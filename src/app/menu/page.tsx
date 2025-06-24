@@ -337,7 +337,7 @@ export default function Menu() {
           <hr className="border-t-2 border-gray-300 mb-4"/>
           <h2
           id={subsection.replace(/\s+/g, '-').toLowerCase()}
-          className={`${lato.className} text-2xl font-bold text-[#43403A] mb-4 text-center uppercase scroll-mt-60`}
+          className={`${lato.className} text-2xl font-bold text-[#43403A] mb-4 text-center uppercase scroll-mt-55`}
         >
           {subsection}
         </h2>

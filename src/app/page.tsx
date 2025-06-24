@@ -1,6 +1,7 @@
 import { lora } from './fonts';
 import { lato } from './fonts';
 import Link from 'next/link'
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,20 +9,32 @@ export default function Home() {
 
       {/* banner section */}
       <div className="relative w-full isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-        <img
-          alt=""
-          src="\images\DSC04762.jpg"
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_62%]"
-        />
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 items-center flex flex-col justify-center text-center">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <img src="https://cdn.discordapp.com/attachments/792939680366592040/1380985661317841026/qqb5aWAhSgAAUoQAEKUIACFKCAkACDRSEmHkQBClCAAhSgAAUoQAEKUEBfAgwW9VXfLC0FKEABClCAAhSgAAUoQAEhAQaLQkw8iAIUoAAFKEABClCAAhSggL4EGCzqq75ZWgpQgAIUoAAFKEABClCAAkICDBaFmHgQBShAAQpQgAIUoAAFKEABfQkwWNRXfbO0FKAABShAAQpQgAIUoAAFhAQYLAox8SAKUIACFKAABShAAQpQgAL6EvgvUA8ifxpSwAAAAAASUVORK5CYII.png?ex=6845de9f&is=68448d1f&hm=65ad30893b2ed4c3a717ba053b6bad4187eeba68bb42e5a76b4d3a8d9378fab0&" alt="Drip Ca Phe Logo" className="w-80 mx-auto mb-8" />
-            <Link href="/menu" className={`${lora.className} font-bold bg-[#677D50] text-white px-6 py-3 rounded-full hover:bg-[#556842] transition-colors`}>
-          View Menu
-        </Link>
-          </div>
+      <Image
+        alt="banner image of Drip Ca Phe"
+        src="/images/DSC04762.jpg"
+        fill
+        className="object-cover object-[center_62%] -z-10"
+        style={{ zIndex: -10 }}
+        priority
+      />
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 items-center flex flex-col justify-center text-center">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <img
+            src="\images\whitelogo.png"
+            alt="Drip Ca Phe Logo"
+            className="w-80 mx-auto mb-8"
+          />
+
+          <Link
+            href="/menu"
+            className={`${lora.className} font-bold bg-[#677D50] text-white px-6 py-3 rounded-full hover:bg-[#556842] transition-colors`}
+          >
+            View Menu
+          </Link>
         </div>
       </div>
+    </div>
 
       {/* about us section */}
       <div className="overflow-hidden bg-[#E7E7E7] w-full py-24 sm:py-32">
@@ -57,34 +70,37 @@ export default function Home() {
             </div>
 
             {/* Image grid section */}
-            <div className="grid grid-cols-3 gap-4 p-4 h-[500px] mb-5">
-              {/* Large image on the left */}
-              <div className="col-span-2 h-full">
-                <img
-                  alt="Inside of Drip Ca Phe"
-                  src="/images/DSC04694.jpg"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="grid grid-cols-3 gap-4 p-4 h-[500px] mb-5">
+                {/* Large image on the left */}
+                <div className="col-span-2 h-full relative">
+                  <Image
+                    alt="Inside of Drip Ca Phe"
+                    src="/images/DSC04694.jpg"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
-              {/* Two stacked images with different heights */}
-              <div className="flex flex-col gap-4 h-full">
-                <div className="h-[60%] overflow-hidden">
-                  <img
-                    alt="Inside of Drip Ca Phe"
-                    src="/images/DSC04676.jpg"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="h-[40%] overflow-hidden">
-                  <img
-                    alt="Inside of Drip Ca Phe"
-                    src="\images\DSC04669.jpg"
-                    className="w-full h-full object-cover"
-                  />
+                {/* Two stacked images with different heights */}
+                <div className="flex flex-col gap-4 h-full">
+                  <div className="h-[60%] relative overflow-hidden">
+                    <Image
+                      alt="Inside of Drip Ca Phe"
+                      src="/images/DSC04676.jpg"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="h-[40%] relative overflow-hidden">
+                    <Image
+                      alt="Inside of Drip Ca Phe"
+                      src="/images/DSC04669.jpg"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
           </div>
         </div>
