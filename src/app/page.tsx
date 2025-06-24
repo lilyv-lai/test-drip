@@ -10,8 +10,8 @@ export default function Home() {
       <div className="relative w-full isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
         <img
           alt=""
-          src="https://s3-media0.fl.yelpcdn.com/bphoto/lhHLNVDZndcbJ9Prmp_HDQ/o.jpg"
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+          src="\images\DSC04762.jpg"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_62%]"
         />
         <div className="mx-auto max-w-7xl px-6 lg:px-8 items-center flex flex-col justify-center text-center">
           <div className="mx-auto max-w-2xl lg:mx-0">
@@ -55,16 +55,42 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <img
-              alt="Inside of Drip Ca Phe"
-              src="https://s3-media0.fl.yelpcdn.com/bphoto/j-8IyzsS1KHzbEGVFvoIEQ/o.jpg"
-              className="w-full max-w-none md:-ml-4 lg:-ml-0"
-            />
+
+            {/* Image grid section */}
+            <div className="grid grid-cols-3 gap-4 p-4 h-[500px] mb-5">
+              {/* Large image on the left */}
+              <div className="col-span-2 h-full">
+                <img
+                  alt="Inside of Drip Ca Phe"
+                  src="/images/DSC04694.jpg"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Two stacked images with different heights */}
+              <div className="flex flex-col gap-4 h-full">
+                <div className="h-[60%] overflow-hidden">
+                  <img
+                    alt="Inside of Drip Ca Phe"
+                    src="/images/DSC04676.jpg"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="h-[40%] overflow-hidden">
+                  <img
+                    alt="Inside of Drip Ca Phe"
+                    src="\images\DSC04669.jpg"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         {/* <!-- Elfsight All-in-One Reviews | Untitled All-in-One Reviews --> */}
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div className="elfsight-app-4e7d4263-910c-45e0-8a67-c67d795f54a5 mt-15" data-elfsight-app-lazy></div>
+        <div className="elfsight-app-4e7d4263-910c-45e0-8a67-c67d795f54a5 mt-20" data-elfsight-app-lazy></div>
       </div>
 
       {/* location and hours */}
