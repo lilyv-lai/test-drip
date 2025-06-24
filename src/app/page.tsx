@@ -70,7 +70,7 @@ export default function Home() {
             </div>
 
             {/* Image grid section */}
-              <div className="grid grid-cols-3 gap-4 p-4 h-[500px] mb-5">
+              <div className="grid grid-cols-3 gap-1 sm:p-4 h-[250px] sm:h-[500px] mb-5">
                 {/* Large image on the left */}
                 <div className="col-span-2 h-full relative">
                   <Image
@@ -82,7 +82,7 @@ export default function Home() {
                 </div>
 
                 {/* Two stacked images with different heights */}
-                <div className="flex flex-col gap-4 h-full">
+                <div className="flex flex-col gap-1 h-full">
                   <div className="h-[60%] relative overflow-hidden">
                     <Image
                       alt="Inside of Drip Ca Phe"
@@ -112,17 +112,17 @@ export default function Home() {
       {/* location and hours */}
       <div className="w-full flex h-[400px]">
         {/* left half */}
-        <div className="w-1/2 bg-[#43403A] flex items-center justify-end px-6">
+        <div className="hidden sm:flex w-1/2 bg-[#43403A] flex items-center justify-end px-6">
           <p className={`${lato.className} mt-2 text-4xl font-semibold text-pretty text-[#E7E7E7] sm:text-5xl`}>
                   LOCATION & HOURS
                 </p>
         </div>
 
         {/* right half */}
-        <div className="w-2/3 bg-[#F2F2F2] flex flex-col items-center justify-center">
+        <div className="w-full px-10 sm:w-2/3 bg-[#F2F2F2] flex flex-col items-center justify-center">
           <div className="flex flex-col items-center">
             <p className={`${lora.className} font-semibold text-[#242831]`}>LOCATION</p>
-            <p className={`${lato.className} font-semibold text-gray-600`}>
+            <p className={`${lato.className} text-center font-semibold text-gray-600`}>
                   4230 Annandale Rd Ste 160 Annandale, VA 22003
             </p>
           </div>
@@ -152,52 +152,60 @@ export default function Home() {
             
             <div className="flex flex-wrap justify-center mt-10 gap-8">
               <div className="flex flex-col items-center group overflow-hidden">
+                <Link href="/menu#signatures-lattes">
                 <img
                   src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
                   alt="Latte"
-                  className="w-64 h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  className="w-40 h-40 sm:w-64 sm:h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
+                </Link>
                 <span className="relative group cursor-pointer">
-                  <span className={`${lora.className} font-semibold text-[#242831] text-lg transition-colors group-hover:text-[#677D50]`}>signatures</span>
+                  <span className={`${lora.className} font-semibold text-[#242831] sm:text-lg transition-colors group-hover:text-[#677D50]`}>signatures</span>
                   <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[#677D50] transition-all group-hover:w-full duration-300"></span>
                 </span>
               </div>
 
 
               <div className="flex flex-col items-center group overflow-hidden">
+                <Link href="/menu#non-coffee">
                 <img
                   src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
                   alt="Latte"
-                  className="w-64 h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  className="w-40 h-40 sm:w-64 sm:h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
+                </Link>
                 <span className="relative group cursor-pointer">
-                  <span className={`${lora.className} font-semibold text-[#242831] text-lg transition-colors group-hover:text-[#677D50]`}>non-coffee</span>
+                  <span className={`${lora.className} font-semibold text-[#242831] sm:text-lg transition-colors group-hover:text-[#677D50]`}>non-coffee</span>
                   <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[#677D50] transition-all group-hover:w-full duration-300"></span>
                 </span>
               </div>
 
 
               <div className="flex flex-col items-center group overflow-hidden">
+                <Link href="/menu#cà-phê">
                 <img
                   src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
                   alt="Latte"
-                  className="w-64 h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  className="w-40 h-40 sm:w-64 sm:h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
+                </Link>
                 <span className="relative group cursor-pointer">
-                  <span className={`${lora.className} font-semibold text-[#242831] text-lg transition-colors group-hover:text-[#677D50]`}>coffee</span>
+                  <span className={`${lora.className} font-semibold text-[#242831] sm:text-lg transition-colors group-hover:text-[#677D50]`}>cà phê</span>
                   <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[#677D50] transition-all group-hover:w-full duration-300"></span>
                 </span>
               </div>
 
 
               <div className="flex flex-col items-center group overflow-hidden">
+                <Link href="/menu#espresso-bar">
                 <img
                   src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
                   alt="Latte"
-                  className="w-64 h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  className="w-40 h-40 sm:w-64 sm:h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
+                </Link>
                 <span className="relative group cursor-pointer">
-                  <span className={`${lora.className} font-semibold text-[#242831] text-lg transition-colors group-hover:text-[#677D50]`}>espresso bar</span>
+                  <span className={`${lora.className} font-semibold text-[#242831] sm:text-lg transition-colors group-hover:text-[#677D50]`}>espresso bar</span>
                   <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[#677D50] transition-all group-hover:w-full duration-300"></span>
                 </span>
               </div>
