@@ -279,7 +279,7 @@ export default function Menu() {
   return (
     // menu banner
     <div className="flex flex-col justify-start min-h-screen text-black">
-      <div className="overflow-hidden bg-[#E7E7E7] w-full flex flex-col justify-end py-5 min-h-[300px]">
+      <div className="overflow-hidden bg-[#E7E7E7] w-full flex flex-col justify-end py-5 min-h-[200px] sm:min-h-[300px]">
         <div className="max-w-7xl w-full px-3 lg:px-4 mx-auto h-full flex flex-col justify-end">
           <h1 className={`${lato.className} mt-2 text-6xl sm:text-8xl font-semibold text-[#43403A]`}>
             MENU
@@ -292,9 +292,9 @@ export default function Menu() {
 
     <div className="w-full max-w-6xl mx-auto px-4 text-center">
       {/* Top-level buttons */}
-      <div className="sticky top-25 z-50 bg-[#F2F2F2] py-4">
+      <div className="sticky top-22 sm:top-25 z-50 bg-[#F2F2F2] py-4">
         {/* Top tabs */}
-        <div className="flex justify-center items-center space-x-4 text-xl text-[#43403A] mb-2">
+        <div className="flex justify-center items-center space-x-4 text-base sm:text-xl text-[#43403A] mb-2">
           {[
             { key: 'drinks', label: 'drinks' },
             { key: 'food', label: 'food' },
@@ -318,7 +318,7 @@ export default function Menu() {
         </div>
 
         {/* Subheaders (conditional by tab) */}
-        <div className="flex flex-wrap justify-center gap-7 mt-3">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-7 mt-3">
           {Object.keys(menuSections[selected]).map((subsection) => (
             <a
               key={subsection}
@@ -341,14 +341,14 @@ export default function Menu() {
         >
           {subsection}
         </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
             {items.map((item) => (
               <div key={item.name}>
-                <img src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png" alt={item.name} className="w-64 h-64 mx-auto"/>
+                <img src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png" alt={item.name} className="w-30 h-30 sm:w-64 sm:h-64 mx-auto"/>
                 <div className="p-4">
-                  <h3 className={`${lato.className} text-lg font-semibold text-[#43403A] text-center lowercase`}>{item.name}</h3>
-                  <p className={`${lato.className} text-lg font-semibold text-[#43403A] mb-1 text-center`}>{item.price}</p>
-                  <p className={`${lato.className} text-sm text-gray-600 text-center`}>{item.description}</p>
+                  <h3 className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] text-center lowercase`}>{item.name}</h3>
+                  <p className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] mb-1 text-center`}>{item.price}</p>
+                  <p className={`${lato.className} text-xs sm:text-sm text-gray-600 text-center`}>{item.description}</p>
                 </div>
               </div>
             ))}
