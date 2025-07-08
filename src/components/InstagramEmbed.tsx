@@ -10,9 +10,10 @@ export default function InstagramEmbed() {
         src="https://www.instagram.com/embed.js"
         strategy="lazyOnload"
         onLoad={() => {
-          if ((window as any).instgrm) {
-            (window as any).instgrm.Embeds.process();
-          }
+          if (typeof window !== 'undefined' && 'instgrm' in window) {
+            const ig = (window as { instgrm?: { Embeds: { process: () => void } } }).instgrm;
+            ig?.Embeds?.process();
+            }
         }}
       />
 
