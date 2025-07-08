@@ -2,6 +2,7 @@ import { lora } from './fonts';
 import { lato } from './fonts';
 import Link from 'next/link'
 import Image from 'next/image';
+import InstagramEmbed from '@/components/InstagramEmbed';
 
 export default function Home() {
   return (
@@ -218,6 +219,28 @@ export default function Home() {
             </div>
         </div>
       </div>
+
+
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8 w-full max-w-7xl mx-auto px-6 py-12 mt-8">
+  {/* left column: instagram embed */}
+  <InstagramEmbed />
+
+  {/* right column: text */}
+  <div className="w-full lg:w-1/2 text-[#242831]">
+  <h2 className={`${lora.className} text-base/7 font-semibold text-[#677D50]`}>our social medias</h2>
+    <p className={`${lato.className} mt-2 text-4xl font-semibold text-pretty text-[#242831] sm:text-5xl`}>
+                  Follow us on Instagram
+                </p>
+    <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
+                  [insert text here]
+                </p>
+  </div>
+</div>
+
+      
+
+
+      
 
       
 
