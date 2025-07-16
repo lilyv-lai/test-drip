@@ -5,7 +5,6 @@ import Script from 'next/script';
 export default function InstagramEmbed() {
   return (
     <>
-      {/* Load the Instagram embed script early */}
       <Script
         src="https://www.instagram.com/embed.js"
         strategy="lazyOnload"
