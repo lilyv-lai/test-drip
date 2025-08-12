@@ -151,13 +151,13 @@ export default function Home() {
             <p className={`${lora.className} text-base/7 font-semibold text-[#677D50] mt-2`}>explore our menu</p>
             <p className={`${lato.className} mt-2 text-4xl font-semibold text-pretty text-[#242831] sm:text-5xl`}>CÀ PHÊ</p>
             
-            <div className="flex flex-wrap justify-center mt-10 gap-8">
+            <div className="flex flex-wrap justify-center mt-10 gap-8 items-end">
               <div className="flex flex-col items-center group overflow-hidden">
                 <Link href="/menu#signatures-lattes">
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
+                  src="https://cdn.discordapp.com/attachments/792939680366592040/1403901484709580841/Untitled89_20250809204302.png?ex=68993ca5&is=6897eb25&hm=7abe95df4c900bba7056057ae7fe502b164422f559fc10b6fd4a1ed354183bd0&"
                   alt="Latte"
-                  className="w-40 h-40 sm:w-64 sm:h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  className="w-45 h-45 sm:w-70 sm:h-72 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
                 </Link>
                 <span className="relative group cursor-pointer">
