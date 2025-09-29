@@ -132,13 +132,13 @@ const menuSections = {
     name: 'ube sea salt foam latte',
     description: 'sweet ube latte with sea salt foam',
     price: '$6.50',
-    image: 'https://cdn.discordapp.com/attachments/792939680366592040/1403901484709580841/Untitled89_20250809204302.png?ex=68993ca5&is=6897eb25&hm=7abe95df4c900bba7056057ae7fe502b164422f559fc10b6fd4a1ed354183bd0&',
+    image: 'images/ubeseasaltfoamlatte.png',
   },
   {
     name: 'pandan sea salt foam latte',
     description: 'pandan-infused latte topped with sea salt foam',
     price: '$6.50',
-    image: 'https://cdn.discordapp.com/attachments/792939680366592040/1403919531126292562/Untitled89_20250809215451.png?ex=68994d73&is=6897fbf3&hm=b9c07a55d1745d60ac3770a04033f8ba74fb71fdf725ea468ecf3d7d34775f44&',
+    image: 'images/pandanseasaltfoamlatte.png',
   },
   {
     name: 'coco matcha cloud',
@@ -165,7 +165,7 @@ const menuSections = {
     name: 'OG Thai tea w. sea salt foam',
     description: 'classic Thai tea topped with sea salt foam (red or green)',
     price: '$6.90',
-    image: 'https://cdn.discordapp.com/attachments/792939680366592040/1403927478128607274/Untitled89_20250809222626.png?ex=689954da&is=6898035a&hm=82208e056150371391d1116b3cfcdfad58eec21d82f83555126369c04d171032&',
+    image: 'images/thaiteared.png',
   },
   {
     name: 'matcha latte',

@@ -65,9 +65,19 @@ export default function Home() {
                 </div>
 
                 <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
-                  [insert text here]
+                  DRiP Cà Phê - Espresso Bar is a modern Vietnamese American specialty coffee concept natively based in Northern Virginia (NOVA) focusing on delivering both traditional bold slow dripped black coffee “Đen Đá” and sweetened “Cà Phê Sữa Đá” with our blend of robusta beans, paying homage to Vietnam’s root of robusta coffee farm, DRiP Cà Phê is keeping it real! 
                 </p>
+                <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
+                  Along with Vietnamese coffee, classic Italian espresso menu is offered with many signature lattes flavors such as pandan and ube. Of course, traditional latte flavors & seasonal menu is always a hit!</p>
               </div>
+              <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
+                  DRiP Cà Phê displays a wide variety of classic Vietnamese delicacies such as Vietnamese organic sweetened yogurt with purple sticky rice, creamy caramelized flans.</p>
+              <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
+                  BahnMimi is DRiP’s spin on Banh Mi - Vietnamese Baguette filled with fresh veggies and meat but with a twist of a panini format, something not seen yet!</p>
+              <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
+                  Coffee, sip, chat and good vibes is what DRiP Cà Phê is all about. </p>
+              <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
+                  Come DRiP n Sip with us!</p>
             </div>
 
             {/* Image grid section */}
@@ -155,7 +165,7 @@ export default function Home() {
               <div className="flex flex-col items-center group overflow-hidden">
                 <Link href="/menu#signatures-lattes">
                 <img
-                  src="https://cdn.discordapp.com/attachments/792939680366592040/1403901484709580841/Untitled89_20250809204302.png?ex=68993ca5&is=6897eb25&hm=7abe95df4c900bba7056057ae7fe502b164422f559fc10b6fd4a1ed354183bd0&"
+                  src="/images/ubeseasaltfoamlatte.png"
                   alt="Latte"
                   className="w-45 h-45 sm:w-70 sm:h-72 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
