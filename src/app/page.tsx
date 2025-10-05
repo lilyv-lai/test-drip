@@ -67,17 +67,7 @@ export default function Home() {
                 <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
                   DRiP Cà Phê - Espresso Bar is a modern Vietnamese American specialty coffee concept natively based in Northern Virginia (NOVA) focusing on delivering both traditional bold slow dripped black coffee “Đen Đá” and sweetened “Cà Phê Sữa Đá” with our blend of robusta beans, paying homage to Vietnam’s root of robusta coffee farm, DRiP Cà Phê is keeping it real! 
                 </p>
-                <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
-                  Along with Vietnamese coffee, classic Italian espresso menu is offered with many signature lattes flavors such as pandan and ube. Of course, traditional latte flavors & seasonal menu is always a hit!</p>
               </div>
-              <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
-                  DRiP Cà Phê displays a wide variety of classic Vietnamese delicacies such as Vietnamese organic sweetened yogurt with purple sticky rice, creamy caramelized flans.</p>
-              <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
-                  BahnMimi is DRiP’s spin on Banh Mi - Vietnamese Baguette filled with fresh veggies and meat but with a twist of a panini format, something not seen yet!</p>
-              <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
-                  Coffee, sip, chat and good vibes is what DRiP Cà Phê is all about. </p>
-              <p className={`${lato.className} mt-6 text-lg/8 text-gray-600`}>
-                  Come DRiP n Sip with us!</p>
             </div>
 
             {/* Image grid section */}
