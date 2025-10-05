@@ -2,8 +2,14 @@
 import { useState } from 'react';
 import { lora } from '../fonts';
 import { lato } from '../fonts';
+import Image from "next/image";
 
-
+type MenuItem = {
+  name: string;
+  description: string;
+  price: string;
+  image?: string | null;
+};
 
 const menuSections = {
   drinks: {
@@ -12,37 +18,37 @@ const menuSections = {
         name: 'đen đá [den-da]',
         description: 'classic black iced coffee',
         price: '$5.50',
-        image: 'images/denda.png',
+        image: '/images/denda.png',
       },
       {
         name: 'sữa đá [su-da]',
         description: 'classic Vietnamese iced coffee',
         price: '$6.00',
-        image: 'images/caphesuada.png',
+        image: '/images/caphesuada.png',
       },
       {
         name: 'xíu [xiu]',
         description: 'mini sữa đá, Vietnamese "café latte"',
         price: '$6.00',
-        image: 'images/xiuvietnameselatte.png',
+        image: '/images/xiuvietnameselatte.png',
       },
       {
         name: 'muối [mui]',
         description: 'sea salt foam sữa đá',
         price: '$6.50',
-        image: 'images/duacoconutcreamfoamcoffee.png',
+        image: '/images/duacoconutcreamfoamcoffee.png',
       },
       {
         name: 'khèe [kheeee]',
         description: 'crème brulee foam sữa đá',
         price: '$6.50',
-        image: 'images/kheeecremebrulevietcoffee.png',
+        image: '/images/kheeecremebrulevietcoffee.png',
       },
       {
         name: 'trứng [trung]',
         description: 'egg foam sữa đá',
         price: '$6.90',
-        image: 'images/trungeggcoffee.png',
+        image: '/images/trungeggcoffee.png',
       },
     ],
 
@@ -51,52 +57,48 @@ const menuSections = {
         name: 'double espresso',
         description: '2 oz strong espresso shot',
         price: '$3.80',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
       },
       {
         name: 'americano',
         description: 'espresso with hot water',
         price: '$4.50',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
       },
       {
         name: 'cortado',
         description: 'equal parts espresso and steamed milk',
         price: '$4.50',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
       },
       {
         name: 'cappuccino',
         description: 'espresso, steamed milk, and foam',
         price: '$5.00',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+        image: '',
       },
       {
         name: 'macchiato',
         description: 'espresso with a small amount of milk foam',
         price: '$5.00',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+        image: '',
       },
       {
         name: 'café latte',
         description: 'espresso with steamed milk',
         price: '$5.50',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+        image: '',
       },
     ],
 
     "cà phê - phin": [
       {
-        name: 'đen [black]',
-        description: 'traditional black phin drip coffee',
-        price: '$4.50',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
-      },
-      {
         name: 'sữa [w. condensed milk]',
         description: 'phin drip with condensed milk',
         price: '$5.00',
-        image: 'images/caphephin.png',
+        image: '/images/caphephin.png',
+      },
+      {
+        name: 'đen [black]',
+        description: 'traditional black phin drip coffee',
+        price: '$4.50',
       },
     ],
 
@@ -105,25 +107,25 @@ const menuSections = {
         name: 'drip coffee',
         description: 'house-brewed daily drip',
         price: '$3.80',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+        image: '',
       },
       {
         name: 'pour over',
         description: 'hand-poured brew',
         price: '$4.70',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+        image: '',
       },
       {
         name: 'french press',
         description: 'brewed in a French press',
         price: '$4.70',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+        image: '',
       },
       {
         name: 'cold brew',
         description: 'slow-steeped cold coffee on tap',
         price: '$5.50',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+        image: '',
       },
     ],
 
@@ -132,103 +134,95 @@ const menuSections = {
     name: 'ube sea salt foam latte',
     description: 'sweet ube latte with sea salt foam',
     price: '$6.50',
-    image: 'images/ubeseasaltfoamlatte.png',
+    image: '/images/ubeseasaltfoamlatte.png',
   },
   {
     name: 'pandan sea salt foam latte',
     description: 'pandan-infused latte topped with sea salt foam',
     price: '$6.50',
-    image: 'images/pandanseasaltfoamlatte.png',
+    image: '/images/pandanseasaltfoamlatte.png',
   },
   {
     name: 'coco matcha cloud',
     description: 'matcha latte with coconut and cloud foam',
     price: '$6.50',
-    image: 'images/cocomatcha.png',
+    image: '/images/cocomatcha.png',
   },
 ],
 
 "teas": [
   {
-    name: 'chai latte',
-    description: 'spiced chai with steamed milk',
-    price: '$6.00',
-    image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
-  },
-  {
-    name: 'Chiang Mai breeze',
-    description: 'green Thai lemonade iced tea',
-    price: '$6.20',
-    image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
-  },
-  {
     name: 'OG Thai tea w. sea salt foam',
     description: 'classic Thai tea topped with sea salt foam (red or green)',
     price: '$6.90',
-    image: 'images/thaiteared.png',
+    image: '/images/thaiteared.png',
   },
   {
     name: 'matcha latte',
     description: 'creamy green tea matcha latte',
     price: '$6.50',
-    image: 'images/matchalatte.png',
+    image: '/images/matchalatte.png',
   },
   {
     name: 'strawberry matcha latte',
     description: 'layered strawberry and matcha with milk',
     price: '$6.90',
-    image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+  },
+  {
+    name: 'chai latte',
+    description: 'spiced chai with steamed milk',
+    price: '$6.00',
+  },
+  {
+    name: 'Chiang Mai breeze',
+    description: 'green Thai lemonade iced tea',
+    price: '$6.20',
   },
 ],
 
 "signatures lattes": [
   {
-    name: 'liquid cocaine',
-    description: 'white mocha + 2 shots + CaPheSuaDa + sea salt foam',
-    price: '$7.20',
-    image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
-  },
-  {
-    name: 'mocha cloud espresso latte',
-    description: 'chocolatey espresso with cloud foam',
-    price: '$6.90',
-    image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
-  },
-  {
     name: 'ube espresso latte',
     description: 'ube-infused espresso latte',
     price: '$6.50',
-    image: 'images/ubeexpressolatte.png',
+    image: '/images/ubeexpressolatte.png',
   },
   {
     name: 'pandan espresso latte',
     description: 'earthy pandan espresso latte',
     price: '$6.50',
-    image: 'images/pandanexpressolatte.png',
-  },
-  {
-    name: 'nutella espresso latte',
-    description: 'espresso latte with nutella flavor',
-    price: '$6.50',
-    image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
-  },
-  {
-    name: 'hazy white mocha latte',
-    description: 'creamy white mocha with a bold twist',
-    price: '$6.50',
-    image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
+    image: '/images/pandanexpressolatte.png',
   },
   {
     name: 'dalgona café latte',
     description: 'whipped dalgona-style latte',
     price: '$6.50',
-    image: 'images/dalgonacafelatte.png',
+    image: '/images/dalgonacafelatte.png',
+  },
+  {
+    name: 'liquid cocaine',
+    description: 'white mocha + 2 shots + CaPheSuaDa + sea salt foam',
+    price: '$7.20',
+  },
+  {
+    name: 'mocha cloud espresso latte',
+    description: 'chocolatey espresso with cloud foam',
+    price: '$6.90',
+  },
+  {
+    name: 'nutella espresso latte',
+    description: 'espresso latte with nutella flavor',
+    price: '$6.50',
+  },
+  {
+    name: 'hazy white mocha latte',
+    description: 'creamy white mocha with a bold twist',
+    price: '$6.50',
   },
   {
     name: 'caramel espresso latte',
     description: 'classic espresso latte with caramel',
     price: '$6.50',
-    image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
   },
 ]
   },
@@ -239,7 +233,7 @@ const menuSections = {
         name: 'Banh Mi Sandwich',
         description: 'Traditional Vietnamese sandwich with pickled veggies and pork.',
         price: '$6.50',
-        image: 'images/mozarellapestobanhmi.png',
+        image: '/images/mozarellapestobanhmi.png',
       },
     ],
     "Snacks": [
@@ -247,7 +241,6 @@ const menuSections = {
         name: 'Spring Rolls',
         description: 'Fresh rolls with shrimp, vermicelli, and peanut sauce.',
         price: '$5.00',
-        image: 'https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png',
       },
     ],
   },
@@ -258,7 +251,7 @@ const menuSections = {
         name: 'Drip Cà Phê House Blend',
         description: 'Smooth and bold Vietnamese roast.',
         price: '$12.00 / bag',
-        image: 'images/coffeebean.png',
+        image: '/images/coffeebean.png',
       },
     ],
     "Specialty": [
@@ -266,7 +259,7 @@ const menuSections = {
         name: 'Single-Origin Robusta',
         description: 'Strong, earthy notes with low acidity.',
         price: '$14.00 / bag',
-        image: 'images/coffeebean.png',
+        image: '/images/coffeebean.png',
       },
     ],
   },
@@ -342,16 +335,40 @@ export default function Menu() {
           {subsection}
         </h2>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
-            {items.map((item) => (
+          {items.map((item) => {
+            const src = item.image ?? null;
+            const hasImage =
+              typeof src === "string" &&
+              (src.startsWith("/") || src.startsWith("http://") || src.startsWith("https://"));
+
+            return (
               <div key={item.name}>
-                <img src={item.image} alt={item.name} className="w-30 h-30 sm:w-64 sm:h-64 mx-auto"/>
+                {hasImage && (
+                  <div className="relative w-30 h-30 sm:w-64 sm:h-64 mx-auto">
+                    <Image
+                      src={src!}
+                      alt={item.name}
+                      fill
+                      sizes="(max-width:640px) 120px, (max-width:1024px) 256px, 256px"
+                      quality={70}
+                    />
+                  </div>
+                )}
+
                 <div className="p-4">
-                  <h3 className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] text-center lowercase`}>{item.name}</h3>
-                  <p className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] mb-1 text-center`}>{item.price}</p>
-                  <p className={`${lato.className} text-xs sm:text-sm text-gray-600 text-center`}>{item.description}</p>
+                  <h3 className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] text-center lowercase`}>
+                    {item.name}
+                  </h3>
+                  <p className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] mb-1 text-center`}>
+                    {item.price}
+                  </p>
+                  <p className={`${lato.className} text-xs sm:text-sm text-gray-600 text-center`}>
+                    {item.description}
+                  </p>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       ))}
