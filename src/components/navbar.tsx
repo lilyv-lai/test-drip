@@ -46,7 +46,9 @@ export default function Navbar() {
 
         <div className="space-x-2 sm:space-x-4">
         <Link
-        href="/menu"
+        href="https://xn--dripcphespressobar-jrb6r.square.site/?location_id=L4ENZG98M2P82&fulfillment=PICKUP"
+        target="_blank"
+        rel="noopener noreferrer"
         className={`${lato.className} text-sm sm:text-base text-white border-2 border-white bg-[#43403A] font-bold rounded-full px-5 py-2.5 text-center me-2 mb-2
                     transition-all duration-300 ease-in-out
                     hover:text-[#43403A] hover:bg-white hover:shadow-lg hover:scale-105`}
