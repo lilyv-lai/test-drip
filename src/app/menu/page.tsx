@@ -11,6 +11,8 @@ type MenuItem = {
   image?: string | null;
 };
 
+type MenuSections = Record<string, Record<string, MenuItem[]>>;
+
 const menuSections = {
   drinks: {
     "cà phê": [
@@ -263,7 +265,7 @@ const menuSections = {
       },
     ],
   },
-}
+} satisfies MenuSections;
 
 
 export default function Menu() {
@@ -325,51 +327,55 @@ export default function Menu() {
       </div>
 
       {/* Subsections + Menu Items */}
-      {Object.entries(menuSections[selected]).map(([subsection, items]) => (
-        <div key={subsection} className="mb-12 text-left">
-          <hr className="border-t-2 border-gray-300 mb-4"/>
-          <h2
-          id={subsection.replace(/\s+/g, '-').toLowerCase()}
-          className={`${lato.className} text-2xl font-bold text-[#43403A] mb-4 text-center uppercase scroll-mt-58`}
-        >
-          {subsection}
-        </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
-          {items.map((item) => {
-            const src = item.image ?? null;
-            const hasImage =
-              typeof src === "string" &&
-              (src.startsWith("/") || src.startsWith("http://") || src.startsWith("https://"));
+      {Object.entries(menuSections[selected]).map(
+        ([subsection, items]: [string, MenuItem[]]) => (
+          <div key={subsection} className="mb-12 text-left">
+            <hr className="border-t-2 border-gray-300 mb-4" />
+            <h2
+              id={subsection.replace(/\s+/g, '-').toLowerCase()}
+              className={`${lato.className} text-2xl font-bold text-[#43403A] mb-4 text-center uppercase scroll-mt-58`}
+            >
+              {subsection}
+            </h2>
 
-            return (
-              <div key={item.name}>
-                {hasImage && (
-                  <div className="relative w-30 h-30 sm:w-64 sm:h-64 mx-auto">
-                    <Image
-                      src={src!}
-                      alt={item.name}
-                      fill
-                      sizes="(max-width:640px) 120px, (max-width:1024px) 256px, 256px"
-                      quality={70}
-                    />
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
+              {items.map((item: MenuItem) => {
+                const src =
+                  typeof item.image === 'string' && item.image.trim()
+                    ? item.image
+                    : null;
+
+                const hasImage = !!src && (src.startsWith('/') || src.startsWith('http'));
+
+                return (
+                  <div key={item.name}>
+                    {hasImage && (
+                      <div className="relative mx-auto w-[120px] h-[120px] sm:w-64 sm:h-64">
+                        <Image
+                          src={src!}
+                          alt={item.name}
+                          fill
+                          sizes="(max-width:640px) 120px, (max-width:1024px) 256px, 256px"
+                          quality={70}
+                        />
+                      </div>
+                    )}
+
+                    <div className="p-4">
+                      <h3 className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] text-center lowercase`}>
+                        {item.name}
+                      </h3>
+                      <p className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] mb-1 text-center`}>
+                        {item.price}
+                      </p>
+                      <p className={`${lato.className} text-xs sm:text-sm text-gray-600 text-center`}>
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                )}
-
-                <div className="p-4">
-                  <h3 className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] text-center lowercase`}>
-                    {item.name}
-                  </h3>
-                  <p className={`${lato.className} text-sm sm:text-lg font-semibold text-[#43403A] mb-1 text-center`}>
-                    {item.price}
-                  </p>
-                  <p className={`${lato.className} text-xs sm:text-sm text-gray-600 text-center`}>
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-              );
-            })}
-          </div>
+                );
+              })}
+        </div>
         </div>
       ))}
     </div>
