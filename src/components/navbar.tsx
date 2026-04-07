@@ -10,9 +10,9 @@ export default function Navbar() {
         <Image
           src="/images/dripicon.png"
           alt="Drip Logo"
-          width={40}
-          height={40}
-          className="w-8 h-12 sm:w-10 sm:h-12 md:w-11 md:h-16"
+          width={30}
+          height={30}
+          className="w-8 h-12 sm:w-10 sm:h-12 md:w-7 md:h-10"
         />
       </Link>
         <div className="flex items-center space-x-2 sm:space-x-6">
@@ -46,7 +46,7 @@ export default function Navbar() {
 
         <div className="space-x-2 sm:space-x-4">
         <Link
-        href="https://xn--dripcphespressobar-jrb6r.square.site/?location_id=L4ENZG98M2P82&fulfillment=PICKUP"
+        href="http://dripcaphespressobar.square.site/"
         target="_blank"
         rel="noopener noreferrer"
         className={`${lato.className} text-sm sm:text-base text-white border-2 border-white bg-[#43403A] font-bold rounded-full px-5 py-2.5 text-center me-2 mb-2
