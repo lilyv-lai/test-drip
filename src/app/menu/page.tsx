@@ -238,36 +238,43 @@ const menuSections = {
   },
 
   food: {
-    "Savory": [
+    "savory": [
       {
         name: 'Banh Mi Sandwich',
-        description: 'Traditional Vietnamese sandwich with pickled veggies and pork.',
+        description: 'traditional Vietnamese sandwich with pickled veggies and pork',
         price: '$6.50',
         image: '/images/mozarellapestobanhmi.png',
       },
     ],
-    "Snacks": [
+    "snacks": [
       {
-        name: 'Spring Rolls',
-        description: 'Fresh rolls with shrimp, vermicelli, and peanut sauce.',
-        price: '$5.00',
+        name: 'butter mochi',
+        description: 'soft and chewy rice cake with a rich buttery flavor',
+        price: '$4.50 per piece',
+        image: '/images/buttermochi.png',
+      },
+      {
+        name: 'strawberry matcha overnight oats',
+        description: 'creamy oats soaked in matcha with fresh strawberries',
+        price: '$5.20',
+        image: '/images/strawberrymatchaoats.png',
       },
     ],
   },
 
   roasts: {
-    "House Roasts": [
+    "house roasts": [
       {
         name: 'Drip Cà Phê House Blend',
-        description: 'Smooth and bold Vietnamese roast.',
+        description: 'smooth and bold Vietnamese roast',
         price: '$12.00 / bag',
-        image: '/images/coffeebean.png',
+        image: '/images/housecoffeebean.png',
       },
     ],
-    "Specialty": [
+    "specialty": [
       {
         name: 'Single-Origin Robusta',
-        description: 'Strong, earthy notes with low acidity.',
+        description: 'strong, earthy notes with low acidity',
         price: '$14.00 / bag',
         image: '/images/coffeebean.png',
       },
@@ -295,7 +302,7 @@ export default function Menu() {
 
     <div className="w-full max-w-6xl mx-auto px-4 text-center">
       {/* Top-level buttons */}
-      <div className="sticky top-22 sm:top-25 z-50 bg-[#F2F2F2] py-4">
+      <div className="sticky top-19 sm:top-19 z-50 bg-[#F2F2F2] py-4">
         {/* Top tabs */}
         <div className="flex justify-center items-center space-x-4 text-base sm:text-xl text-[#43403A] mb-2">
           {[
