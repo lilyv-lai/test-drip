@@ -64,11 +64,13 @@ const menuSections = {
         name: 'americano',
         description: 'espresso with hot water',
         price: '$4.50',
+        image: '/images/americano.png',
       },
       {
         name: 'cortado',
         description: 'equal parts espresso and steamed milk',
         price: '$4.50',
+        image: '/images/cortado.png',
       },
       {
         name: 'cappuccino',
@@ -86,7 +88,7 @@ const menuSections = {
         name: 'café latte',
         description: 'espresso with steamed milk',
         price: '$5.50',
-        image: '',
+        image: '/images/cafelatte.png',
       },
     ],
 
@@ -157,7 +159,7 @@ const menuSections = {
     name: 'OG Thai tea w. sea salt foam',
     description: 'classic Thai tea topped with sea salt foam (red or green)',
     price: '$6.90',
-    image: '/images/thaiteared.png',
+    image: '/images/redandgreenthaitea.png',
   },
   {
     name: 'matcha latte',
@@ -169,6 +171,7 @@ const menuSections = {
     name: 'strawberry matcha latte',
     description: 'layered strawberry and matcha with milk',
     price: '$6.90',
+    image: '/images/strawberrymatchalatte.png',
   },
   {
     name: 'chai latte',
@@ -179,6 +182,7 @@ const menuSections = {
     name: 'Chiang Mai breeze',
     description: 'green Thai lemonade iced tea',
     price: '$6.20',
+    image: '/images/chiangmaibreeze.png',
   },
 ],
 
@@ -202,19 +206,22 @@ const menuSections = {
     image: '/images/dalgonacafelatte.png',
   },
   {
-    name: 'liquid cocaine',
+    name: 'liquid cocoaine',
     description: 'white mocha + 2 shots + CaPheSuaDa + sea salt foam',
     price: '$7.20',
+    image: '/images/liquidcocoaine.png',
   },
   {
     name: 'mocha cloud espresso latte',
     description: 'chocolatey espresso with cloud foam',
     price: '$6.90',
+    image: '/images/mochacloudespressolatte.png',
   },
   {
     name: 'nutella espresso latte',
     description: 'espresso latte with nutella flavor',
     price: '$6.50',
+    image: '/images/nutellaespressolatte.png',
   },
   {
     name: 'hazy white mocha latte',
@@ -225,6 +232,7 @@ const menuSections = {
     name: 'caramel espresso latte',
     description: 'classic espresso latte with caramel',
     price: '$6.50',
+    image: '/images/caramelespressolatte.png',
   },
 ]
   },
