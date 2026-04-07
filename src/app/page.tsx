@@ -196,7 +196,7 @@ export default function Home() {
               <div className="flex flex-col items-center group overflow-hidden">
                 <Link href="/menu#signatures-lattes">
                 <img
-                  src="/images/ubeseasaltfoamlatte.png"
+                  src="/images/ubeexpressolatte.png"
                   alt="Latte"
                   className="w-45 h-45 sm:w-70 sm:h-72 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
@@ -211,7 +211,7 @@ export default function Home() {
               <div className="flex flex-col items-center group overflow-hidden">
                 <Link href="/menu#non-coffee">
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
+                  src="/images/cocomatcha.png"
                   alt="Latte"
                   className="w-40 h-40 sm:w-64 sm:h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
@@ -226,7 +226,7 @@ export default function Home() {
               <div className="flex flex-col items-center group overflow-hidden">
                 <Link href="/menu#cà-phê">
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
+                  src="/images/duacoconutcreamfoamcoffee.png"
                   alt="Latte"
                   className="w-40 h-40 sm:w-64 sm:h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
@@ -241,7 +241,7 @@ export default function Home() {
               <div className="flex flex-col items-center group overflow-hidden">
                 <Link href="/menu#espresso-bar">
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/041/924/414/non_2x/ai-generated-latte-in-coffee-cup-isolated-on-transparent-background-free-png.png"
+                  src="/images/cafelatte.png"
                   alt="Latte"
                   className="w-40 h-40 sm:w-64 sm:h-64 object-cover mt-6 mb-4 transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
